@@ -1,17 +1,17 @@
 package com.todoapp.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import java.util.Optional;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 @Entity(name = "tasks")
-public class Tasks {
+public class TaskModel {
     @Id
     @SequenceGenerator(name = "tasks_seq",
             sequenceName = "tasks_sequence",
@@ -19,12 +19,11 @@ public class Tasks {
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator = "tasks_seq")
 
 
-    public int id;
-    public String password;
-    public String name;
-    public String description;
-    public String management;
-
+    private int id;
+    private String password;
+    private String name;
+    private String description;
+    private String management;
 
 
 
