@@ -12,14 +12,4 @@ public class TaskRequest {
     private String description;
     private String management;
 
-    public TaskModel convertToTaskModel(TaskRequest taskRequest){
-        return TaskModel.builder()
-                .name(taskRequest.getName())
-                .password(password)
-                .description(description)
-                .management(management)
-                .build();
-    }
-
-
 }

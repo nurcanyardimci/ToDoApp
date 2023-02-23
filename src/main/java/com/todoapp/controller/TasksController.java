@@ -1,5 +1,6 @@
 package com.todoapp.controller;
 import com.todoapp.model.TaskModel;
+import com.todoapp.request.ConvertTo;
 import com.todoapp.request.TaskRequest;
 import com.todoapp.response.TaskResponse;
 import com.todoapp.service.TaskService;
@@ -13,13 +14,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value="/tasks")
-@Builder
+
 public class TasksController {
 @Autowired
 private TaskService taskService;
     @PostMapping
     public TaskResponse createTask(@RequestBody TaskRequest taskRequest){
-        TaskModel taskModel=taskRequest.convertToTaskModel(taskRequest);
+        TaskModel taskModel= ConvertTo.convertToTaskModel(taskRequest);
         return taskService.createTask(taskModel);
     }
 

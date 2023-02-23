@@ -1,7 +1,7 @@
 package com.todoapp.exceptionHandler;
 
 
-import com.todoapp.response.NotAuthorizedResponse;
+import com.todoapp.exceptionHandler.models.NotAuthorizedResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

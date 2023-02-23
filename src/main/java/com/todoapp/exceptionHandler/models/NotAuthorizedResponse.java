@@ -1,4 +1,4 @@
-package com.todoapp.exceptionHandler.model;
+package com.todoapp.exceptionHandler.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,6 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NotAuthorizedResponse {
-
     private String message;
     private HttpStatus httpStatus;
 }
